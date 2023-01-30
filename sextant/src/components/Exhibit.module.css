@@ -1,0 +1,10 @@
+/*Created by bash script*/
+.Exhibit{
+    /* background-color: var(--off-white-1); */
+    padding: 1rem;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    grid-gap: 0.25rem;
+}
+

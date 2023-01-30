@@ -1,0 +1,8 @@
+/*Created by bash script*/
+.Card{
+    background-color: var(--off-white-1);
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-1);
+}
+
