@@ -2,6 +2,7 @@
   /* text-align: center; */
   height: 100vh;
   box-sizing:content-box;
+  padding: 0 1rem;
 }
 
 body{
@@ -11,6 +12,9 @@ body{
     */
   --off-white-0: #d6dff7;
   --off-white-1: #bbcaf3;
+  --primary: #5fa7de;
+  --primary-active: #4b8dbe;
+  --primary-hover: #59a1d8;
   --shadow-1: 1px 1px 1px rgba(96, 105, 228, 0.39);
   background-color: var(--off-white-0);
 }
@@ -20,7 +24,7 @@ body > *{
 }
 
 header{
-  padding: 0.5rem 1rem;
+  /* padding: 0.5rem 1rem; */
   margin: 0;
 }
 
