@@ -5,6 +5,7 @@ import Card from './components/Card';
 import Exhibit from './components/Exhibit';
 import Button from './components/Button';
 import IPdisplay from './components/IPdisplay';
+import Latency from './components/Latency';
 
 
 const pages = [
@@ -62,7 +63,8 @@ function App() {
         <Card title="IP Address">
           <p>
             IPV4: <IPdisplay/><br/>
-            IPV6: <IPdisplay ipv6={true}/>
+            IPV6: <IPdisplay ipv6={true}/><br/>
+            Latency: <Latency/>
           </p>
         </Card>
         {samplePageData}
