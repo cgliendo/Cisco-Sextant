@@ -35,7 +35,7 @@ const Latency = (props) => {
 
         intervalPtr = setInterval(() => {
             setLatency(`${delta}ms`);         
-            console.log(delta,'ms');
+            // console.log(delta,'ms');
         }, 750);  
         return () => { //done
             clearInterval(intervalPtr);
