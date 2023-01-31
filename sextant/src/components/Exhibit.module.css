@@ -1,17 +1,11 @@
 /*Created by bash script*/
 
 .Exhibit{
-    /* background-color: tomato; */
     text-align: left;
-    padding: 0.5rem 0;
 }
 .Content{
-    /* background-color: var(--off-white-1); */
-    padding: 1rem 0;
-    /* display: flex; */
     display: grid;
     grid-template-columns: 40% 20% 20% 20%;
     grid-gap: 0.25rem;
-    /* background-color: tomato;     */
 }
 

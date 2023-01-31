@@ -2,7 +2,8 @@
 import styles from './Exhibit.module.css';
 
 const Exhibit = (props) => {
-    return <div className={styles.Exhibit}>
+    const classes = `${styles.Exhibit} ${props.className}`
+    return <div className={classes}>
         {props.title && <h2>{props.title}</h2>}
         <div className={styles.Content}>
             {props.children}

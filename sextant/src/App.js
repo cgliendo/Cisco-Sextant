@@ -17,9 +17,6 @@ const pages = [
     { title: "Card 2" },
     { title: "Card 3" },
     { title: "Card 4" },
-    { title: "Card 5" },
-    { title: "Card 6" },
-    { title: "Card 7" },
   ]},
   //-------------
   {
@@ -36,13 +33,13 @@ const pages = [
 function App() {
   const [currentPage,setCurrentPage] = useState(0);
 
-  const pageTitle = pages[currentPage].heading;
+  // const pageTitle = pages[currentPage].heading;
   const samplePageData = pages[currentPage].content.map((d,index)=>{
     const k=`sampleCard${index}`;
     return (
       <Card title={d.title} key={k}>
         <p>
-          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.
         </p>
       </Card>
     )
@@ -58,8 +55,8 @@ function App() {
   return (
     <div className="App">
       <Banner title={document.title}/>
-      {pageButtons}
-      <Exhibit title={pageTitle}>
+      {/* {pageButtons} */}
+      <Exhibit className='exhibit' /*title={pageTitle}*/>
         <Card title="IP Address">
           <p>
             IPV4: <IPdisplay/><br/>

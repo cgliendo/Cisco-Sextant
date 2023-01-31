@@ -3,8 +3,9 @@
     background-color: var(--primary);
     border-color: var(--primary-active);
     box-shadow: var(--shadow-1);
+    font-size: 1.25rem;
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 5pt;
     border-width: 1px;
     border-style: solid;
     font-weight: bold;
