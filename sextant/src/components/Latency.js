@@ -10,7 +10,8 @@ const Latency = (props) => {
     // let delta = 0;
     // const [delta, setDelta] = useState(0);
     let delta = 0;
-    const [latency, setLatency] = useState('0ms');
+    const [latency, setLatency] = useState(0);
+    const [largest,setLargest] = useState(5);
 
     useEffect(() => {        
         // clientConnect.connect();    
@@ -34,7 +35,9 @@ const Latency = (props) => {
         };
 
         intervalPtr = setInterval(() => {
-            setLatency(`${delta}ms`);         
+            setLatency(delta);
+            if(delta>largest)
+                setLargest(delta); 
             // console.log(delta,'ms');
         }, 750);  
         return () => { //done
@@ -42,7 +45,17 @@ const Latency = (props) => {
       }
     }, [latency]);
 
-    return <span>{latency}</span>;
+    const barWidth = `${100*latency/largest}%`;
+    console.log(barWidth,latency,largest);
+
+    return (
+        <div className="latency-container">
+            <div className='latency-bar'>
+                <div style={{width: barWidth}}></div>
+            </div>
+            Latency {latency}ms
+        </div>
+    );
     }
     export default Latency;
 

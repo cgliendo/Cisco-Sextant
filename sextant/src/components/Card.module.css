@@ -1,8 +1,10 @@
 /*Created by bash script*/
 .Card{
-    background-color: var(--off-white-1);
+    background-color: var(--card);
     padding: 1rem;
+    padding-top: 0.25rem;
     border-radius: 1rem;
     box-shadow: var(--shadow-1);
+    text-align:start
 }
 

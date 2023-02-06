@@ -2,9 +2,9 @@
 import { useEffect, useState } from "react";
 
 const IPdisplay = (props) => {
-    const classes = `${props.className? props.className : ''}`;
-    const [IPAddress,setIPAddress] = useState('1.1.1.1');
-
+    // const classes = `${props.className? props.className : ''}`;
+    const [IPAddress,setIPAddress] = useState('123.151.1.211');
+    const label = props.ipv6 ? 'IPv6:  ' : 'IPv4: ';
     useEffect(() => {
         const fetchAddress = (props.ipv6===true)? 'https://api64.ipify.org?format=json' : 'https://api.ipify.org?format=json';
         fetch(fetchAddress)
@@ -15,9 +15,10 @@ const IPdisplay = (props) => {
 
 
     return (
-        <span className={classes}>
+        <div className='ip-container'>
+            {label} 
             {IPAddress}
-        </span>
+        </div>
         )
     }
     export default IPdisplay;

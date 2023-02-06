@@ -4,7 +4,7 @@ import styles from './Card.module.css';
 const Card = (props) => {
     const classes = `${styles.Card} ${props.className? props.className : ''}`;
     return (
-    <div className={classes}>
+    <div className={classes} {...props}>
         <h2>
             {props.title}
         </h2>

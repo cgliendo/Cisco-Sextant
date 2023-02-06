@@ -37,7 +37,7 @@ function App() {
   const samplePageData = pages[currentPage].content.map((d,index)=>{
     const k=`sampleCard${index}`;
     return (
-      <Card title={d.title} key={k}>
+      <Card style={{maxWidth:'290px'}} title={d.title} key={k}>
         <p>
           At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.
         </p>
@@ -58,11 +58,9 @@ function App() {
       {/* {pageButtons} */}
       <Exhibit className='exhibit' /*title={pageTitle}*/>
         <Card title="IP Address">
-          <p>
-            IPV4: <IPdisplay/><br/>
-            IPV6: <IPdisplay ipv6={true}/><br/>
-            Latency: <Latency/>
-          </p>
+            <IPdisplay/>
+            <IPdisplay ipv6={true}/>
+            <Latency/>
         </Card>
         {samplePageData}
       </Exhibit>
