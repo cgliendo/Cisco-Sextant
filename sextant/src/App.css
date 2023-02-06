@@ -12,20 +12,16 @@ body{
     higher layer => closer to eye 
     */
   --card: #F4F5FB;
-  --primary: #0894D3;
-  --primary-active: #546E7A;
-  --primary-hover: #59a1d8;
   --blue: #0894D3;
   --dark-gray: #2F313C;
   --red: #BE0E19;
   --shadow-1: 1px 1px 1px rgba(96, 105, 228, 0.39);
-  /* background-color: var(--off-white-0); */
-  background-color: #D0E8F3;
+  background-color: #2C2B31;
   font-size: calc(1.5vh + 5pt);
   color: var(--blue);
   font-weight: 500;
   line-height: 1.25em;
-  color: var(--blue);
+  box-sizing: content-box;
 }
 
 body *{
@@ -36,8 +32,14 @@ header{
   /* padding: 0.5rem 1rem; */
   margin: 0;
   background-color: var(--dark-gray);
+  background-color: var(--blue);
   padding: 0 2rem;
 }
+header h1{
+  color: var(--blue);
+  color: whitesmoke;
+}
+
 .exhibit{
   padding: 2rem 2rem;
 }
@@ -48,11 +50,10 @@ h3 {
   padding: 1rem 0;
   color: var(--red);
 }
-header h1{
-  color: var(--blue);
-}
+
 .ip-container{
   padding: 0.25rem 0;
+  /* min-width: 200px; */
 }
 .latency-container{
   padding: 1rem 0;

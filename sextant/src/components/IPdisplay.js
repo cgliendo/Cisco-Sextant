@@ -13,7 +13,6 @@ const IPdisplay = (props) => {
         .then((data) => setIPAddress(data.ip));
     }, []);
 
-
     return (
         <div className='ip-container'>
             {label} 

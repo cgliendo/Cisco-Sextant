@@ -4,12 +4,9 @@
     text-align: left;
 }
 .Content{
-    /* display: grid; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
-    /* grid-template-columns: 40% 20% 20% 20%; */
-    /* grid-gap: 1rem; */
 }
 

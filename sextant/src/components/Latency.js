@@ -46,7 +46,6 @@ const Latency = (props) => {
     }, [latency]);
 
     const barWidth = `${100*latency/largest}%`;
-    console.log(barWidth,latency,largest);
 
     return (
         <div className="latency-container">
