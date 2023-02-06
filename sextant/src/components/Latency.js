@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ProgressBar from "./ProgressBar";
 
 
 var client;
@@ -45,14 +46,16 @@ const Latency = (props) => {
       }
     }, [latency]);
 
-    const barWidth = `${100*latency/largest}%`;
+    const barWidth = 100*latency/largest;
 
     return (
         <div className="latency-container">
-            <div className='latency-bar'>
-                <div style={{width: barWidth}}></div>
-            </div>
-            Latency {latency}ms
+            <ProgressBar percent={barWidth}
+                         label='Latency'
+                         unit='ms'
+                         value={latency}
+                         />
+            {/* Latency {latency}ms */}
         </div>
     );
     }

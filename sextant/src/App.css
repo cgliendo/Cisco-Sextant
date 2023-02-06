@@ -35,6 +35,11 @@ header{
   background-color: var(--dark-gray);
   background-color: var(--blue);
   padding: 0 2rem;
+  color: whitesmoke;
+}
+header > div {
+  display: flex;
+  justify-content: space-between;
 }
 header h1{
   color: var(--blue);
@@ -56,20 +61,6 @@ h3 {
   padding: 0.25rem 0;
   /* min-width: 200px; */
 }
-.latency-container{
-  padding: 1rem 0;
+.box-container{
+  margin-bottom: 1rem;
 }
-.latency-bar{
-  width: 100%;
-  height: 10px;
-  background-color: #CFD8DC;
-  border-radius: 1rem;
-}
-.latency-bar > div {
-  /* width: 33%; */
-  height: 10px;
-  background-color: rgb(147, 206, 88);
-  border-radius: 1rem;
-  transition: width 0.5s;
-}
-
