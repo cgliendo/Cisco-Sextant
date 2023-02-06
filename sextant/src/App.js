@@ -57,7 +57,7 @@ function App() {
       <Banner title={document.title}/>
       {/* {pageButtons} */}
       <Exhibit className='exhibit' /*title={pageTitle}*/>
-        <Card title="IP Address">
+        <Card title="Network">
             <IPdisplay/>
             <IPdisplay ipv6={true}/>
             <Latency/>
