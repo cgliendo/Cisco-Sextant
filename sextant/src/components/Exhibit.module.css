@@ -6,7 +6,15 @@
 .Content{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     gap: 1rem;
 }
-
+.Rail{
+    /* padding: 0 1rem; */
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: 80vh;
+    gap: 1rem;
+    /* background-color: rgb(76, 76, 76); */
+    /* border: 1px solid black; */
+}

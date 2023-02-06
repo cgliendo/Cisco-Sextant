@@ -6,40 +6,11 @@ import IPdisplayTest from './components/IPdisplayTest';
 // import IPdisplay from './components/IPdisplay';
 import Latency from './components/Latency';
 
-
-const pages = [
-  //-------------
-  {
-    heading: "Summary page 1",
-    content: [
-    { title: "Card 1" },
-    { title: "Card 2" },
-    { title: "Card 3" },
-    { title: "Card 4" },
-  ]}
-];
-
 function App() {
-  // const [currentPage,setCurrentPage] = useState(0);
-  const currentPage=0;
-  // const pageTitle = pages[currentPage].heading;
-  const samplePageData = pages[currentPage].content.map((d,index)=>{
-    const k=`sampleCard${index}`;
-    return (
-      <Card style={{maxWidth:'290px'}} title={d.title} key={k}>
-        <p>
-          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.
-        </p>
-      </Card>
-    )
-  });
-
-  // const pageButtons = pages.map((p,index)=>{
-  //   const k=`button${index}`;
-  //   return (
-  //     <Button key={k}>{p.heading}</Button>
-  //   )
-  // });
+  
+  const sampleData = (<p>
+    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.
+  </p>);
 
   return (
     <div className="App">
@@ -53,7 +24,15 @@ function App() {
             {/* <IPdisplay ipv6={true}/> */}
             <Latency/>
         </Card>
-        {samplePageData}
+        <Card title="Component 2">
+          {sampleData}
+        </Card>
+        <Card title="Component 3">
+          {sampleData}
+        </Card>
+        <Card style={{height:'400px'}}title="Big Component">
+          {sampleData}
+        </Card>
       </Exhibit>
     </div>
   );
