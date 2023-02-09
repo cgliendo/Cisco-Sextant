@@ -7,21 +7,20 @@
 }
 
 body{
-  /*
-    format: --color-name-layer
-    higher layer => closer to eye 
-    */
   --card: #F4F5FB;
   --blue: #0894D3;
   --dark-gray: #2F313C;
   --red: #BE0E19;
   --shadow-1: 1px 1px 1px rgba(96, 105, 228, 0.39);
   background-color: #2C2B31;
-  font-size: calc(1.5vh + 5pt);
+  font-size: calc(1.35vh + 5pt);
   color: var(--blue);
   font-weight: 500;
   line-height: 1.25em;
   box-sizing: content-box;
+}
+p{
+  font-weight: 400;
 }
 
 body *{
@@ -34,7 +33,7 @@ header{
   margin: 0;
   background-color: var(--dark-gray);
   background-color: var(--blue);
-  padding: 0 2rem;
+  padding: 0 2.5rem;
   color: whitesmoke;
 }
 header > div {

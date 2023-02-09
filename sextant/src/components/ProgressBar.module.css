@@ -1,6 +1,7 @@
 /*Created by bash script*/
 .Container{
-    padding: 0 0 1rem 0;      
+    padding: 0 0 1rem 0;
+    font-size: 70%;
 }
 .ProgressBar{
     width: 100%;

@@ -1,24 +1,20 @@
 import { useEffect, useState } from "react";
 import ProgressBar from "./ProgressBar";
 
-
 var client;
 var W3CWebSocket;
-let init = 0;
+let init = false;
 let intervalPtr;
 
 const Latency = (props) => {
-    // let delta = 0;
-    // const [delta, setDelta] = useState(0);
     let delta = 0;
     const [latency, setLatency] = useState(0);
     const [largest,setLargest] = useState(5);
-
+    // let connected = false;
     useEffect(() => {        
-        // clientConnect.connect();    
         
-        if(init===0){
-            init++;
+        if(!init){
+            init=true;
             W3CWebSocket = require('websocket').w3cwebsocket;
             client = new W3CWebSocket('ws://localhost:55455/', null);
         }
@@ -29,6 +25,7 @@ const Latency = (props) => {
     
         client.onopen = function() {
             console.log('WebSocket Client Connected');
+            // connected = true;
         };
     
         client.onmessage = function(e) {
@@ -48,6 +45,9 @@ const Latency = (props) => {
 
     const barWidth = 100*latency/largest;
 
+    // if(!connected)
+    //     latency = ''
+
     return (
         <div className="latency-container">
             <ProgressBar percent={barWidth}
@@ -55,7 +55,6 @@ const Latency = (props) => {
                          unit='ms'
                          value={latency}
                          />
-            {/* Latency {latency}ms */}
         </div>
     );
     }

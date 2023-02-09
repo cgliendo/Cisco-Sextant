@@ -11,7 +11,7 @@ const IPdisplay = (props) => {
         .then((response) => response.json())
         // .then((data) => console.log(data));
         .then((data) => setIPAddress(data.ip));
-    }, []);
+    });
 
     return (
         <div className='ip-container'>

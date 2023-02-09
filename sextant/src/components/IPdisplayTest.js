@@ -1,5 +1,3 @@
-// import styles from './IPdisplay.module.css';
-import { useEffect, useState } from "react";
 
 const IPdisplayTest = (props) => {
     const label = props.ipv6 ? 'IPv6:  ' : 'IPv4: ';
